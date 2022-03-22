@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="Одежда">
-        <meta name="discription" content="LanaLux">
-        <meta name="author" content="Peter Lastochkin">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/ecotrop/css/style.css">
-        <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp,package.route&amp;lang=ru-RU&amp;apikey=6ed3c880-7f55-4610-9a8a-0e20076a85ac" type="text/javascript"></script>
-        <title>greenHouse</title>
-    </head>
+    <%- include('./partials/head') %> 
     <body id="body">
         <div class="mainBlock">
-            <div id="map">
-            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ebe42f06d58aa7c7c5c74076a1a73a7873462842268cf82c1cd12bfb369d969&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=true"></script> -->
-            </div>
+            <%- include('./partials/map')  %> 
             <div id="list"></div>
             <div class="downMenu">
                 <div class="commonBox">
@@ -24,89 +13,15 @@
                     <div class="headMenu">Ближайшие и избранные остановки&#8195;&#8195;<span class="switchMenuStyle" onclick="switchMenu()">&#8658;</span></div>
                     <div class="busStop">
                         <div class="busStopLeft">
-                            <div class="busTop">
-                                <div class="img"><img src="/ecotrop/img/image 55.png"></div>
-                                <div class="topText">180 м</div>
-                            </div>
-                            <div class="street">Челябинская ул., 21</div>
-                            <div class="commonDownBlock">
-                                <div class="downBlock">
-                                    <div class="blueBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                                <div class="downBlock">
-                                    <div class="blueBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                                <div class="downBlock">
-                                    <div class="blueBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                            </div>
+                            <%- include('./partials/busStop', {colorBlock: 'blueBlock'})   %> 
                         </div>
                         <div class="busStopRight">
-                            <div class="busTop">
-                                <div class="img"><img src="/ecotrop/img/image 55.png"></div>
-                                <div class="topText">180 м</div>
-                            </div>
-                            <div class="street">Челябинская ул., 21</div>
-                            <div class="commonDownBlock">
-                                <div class="downBlock">
-                                    <div class="orangeBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                                <div class="downBlock">
-                                    <div class="orangeBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                                <div class="downBlock">
-                                    <div class="orangeBlock">974</div>
-                                    <div class="timeGo">4 мин</div>
-                                </div>
-                            </div>
+                            <%- include('./partials/busStop', {colorBlock: 'orangeBlock'})   %> 
                         </div>
                     </div>
                 </div>
-                <div class="commonBox">
-                    <div class="textName">Избранные адреса</div>
-                    <div class="boxContainer2">
-                        <div class="boxContainerBlock">
-                            <div class="boxContainer">
-                                <div class="imgCircle"><img src="/ecotrop/img/image 56.png"></div>
-                                <div class="place">Дом</div>
-                            </div>
-                            <div class="addAdress">Добавить адрес</div>
-                        </div>
-                        <div class="boxContainerBlock">
-                            <div class="boxContainer">
-                                <div class="imgCircle"><img src="/ecotrop/img/image 57.png"></div>
-                                <div class="place">Дом</div>
-                            </div>
-                            <div class="addAdress">Добавить адрес</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="commonBox">
-                    <div class="textName">Рядом с вами</div>
-                    <div class="boxContainer">
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/image 58.png"></div>
-                            <div class="discription">Самокаты</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/image 59.png"></div>
-                            <div class="discription">Самокаты</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/image 60.png"></div>
-                            <div class="discription">Самокаты</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/Group 85.png"></div>
-                            <div class="discription">Самокаты</div>
-                        </div>
-                    </div>
-                </div>
+                <%- include('./partials/favoriteAddress') %>
+                <%- include('./partials/nextToYou') %>
                 <div class="commonBox" style="display: none;">
                     <div class="textName">Интересное</div>
                     <div class="boxOfPromote">
@@ -125,22 +40,11 @@
                 </div>   
                 <div class="commonBox2">
                     <div class="boxContainer">
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/here1.png"></div>
-                            <div class="discription">Самокат</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/here2.png"></div>
-                            <div class="discription">Велосипед</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/here3.png"></div>
-                            <div class="discription">Пешком</div>
-                        </div>
-                        <div class="boxOfPlace">
-                            <div class="imgBigCircle"><img src="/ecotrop/img/here4.png"></div>
-                            <div class="discription">Мобильно</div>
-                        </div>
+                        <%- include('./partials/boxOfPlace', {title: 'Самокаты', image: 'here1.png'})  %> 
+                        <%- include('./partials/boxOfPlace', {title: 'Велосипед', image: 'here2.png'})  %> 
+                        <%- include('./partials/boxOfPlace', {title: 'Пешком', image: 'here3.png'})  %> 
+                        <%- include('./partials/boxOfPlace', {title: 'Мобильно', image: 'here4.png'})  %> 
+                        
                     </div>
                 </div>
             </div>
