@@ -3,6 +3,7 @@
 .vagrant
 Dockerfile
 Vagrantfile
+.DS_Store
 # .gitignore
 install.sh
 rsa_keys
