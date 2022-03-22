@@ -11,7 +11,7 @@ function openMenu(e){
         menuTap[0].style.borderRadius = '15px 0 0 15px';
         menuTap[4].style.borderRadius = '0 15px 15px 0';
         menuTap[e].style.backgroundColor = 'hsla(0, 0%, 100%, 1)';
-        icon[e].src = 'img/' + (e + 1) + '_active.svg';
+        icon[e].src = '/main/img/' + (e + 1) + '_active.svg';
         }, 1000);
         appearMenu(1);
         smoothClosed();
@@ -20,7 +20,7 @@ function openMenu(e){
     
     for (let i = 0; i < menuTap.length; i++){
         menuTap[i].style.backgroundColor = 'hsla(0, 0%, 100%, 1)';
-        icon[i].src = 'img/' + (i + 1) + '_active.svg';
+        icon[i].src = '/main/img/' + (i + 1) + '_active.svg';
     }
     
     if (e != 'start'){
@@ -32,7 +32,7 @@ function openMenu(e){
             }
         }
         
-        icon[e].src = 'img/' + (e + 1) + '_disabled.svg';
+        icon[e].src = '/main/img/' + (e + 1) + '_disabled.svg';
         menuTap[0].style.borderRadius = '15px 0 0 0';
         menuTap[4].style.borderRadius = '0 15px 0 0';
         
@@ -63,7 +63,7 @@ function openMenu(e){
             menuTap[0].style.borderRadius = '15px 0 0 15px';
             menuTap[4].style.borderRadius = '0 15px 15px 0';
             menuTap[e].style.backgroundColor = 'hsla(0, 0%, 100%, 1)';
-            icon[e].src = 'img/' + (e + 1) + '_active.svg';
+            icon[e].src = '/main/img/' + (e + 1) + '_active.svg';
             }, 1000);
             appearMenu(1);
             smoothClosed();
@@ -458,7 +458,7 @@ var LeafIcon = L.Icon.extend({
     }
 });
 
-var pointFirstDemo = new LeafIcon({iconUrl: 'img/Point.svg'});
+var pointFirstDemo = new LeafIcon({iconUrl: '/main/img/Point.svg'});
 
 let marker;
 function initialize(e, left, right){

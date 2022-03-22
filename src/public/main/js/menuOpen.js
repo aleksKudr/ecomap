@@ -42,7 +42,7 @@ function getDataPoint(){
                 dataInfo_1 += '<div class="boxOfPoint">' +
                     '<div class="upBlockOfPoint" onclick="openAnotherInfo(7), initialize(\'select\', 56.175434273986866, 36.99896217534477)">' +
                         '<div class="leftPoint">' +
-                            '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                            '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
                         '</div>' +
                         '<div class="rightPoint">' +
                             '<div class="" style="display: none">' + arrData[i].name_place + '</div>' +
@@ -108,7 +108,7 @@ function startPoint(){
     dataInfo_1 = '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(0), initialize(\'select\', 56.19690433351169, 36.95694805333598)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Перекресток</div>' +
@@ -139,7 +139,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(1), initialize(\'select\', 56.194134874016584, 36.96790219495273)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Эльдорадо</div>' +
@@ -172,7 +172,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(2), initialize(\'select\', 56.18014693407129, 36.95673347661434)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Перекресток</div>' +
@@ -203,7 +203,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(3), initialize(\'select\', 56.18626205236132, 36.97470427701376)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Экологический Сервис</div>' +
@@ -235,7 +235,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(4), initialize(\'select\', 56.1889034569558, 36.976463806127306)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">ВкусВилл</div>' +
@@ -266,7 +266,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(5), initialize(\'select\', 56.18735393467215, 36.98250414082844)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Экологический Сервис</div>' +
@@ -298,7 +298,7 @@ function startPoint(){
     '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(6), initialize(\'select\', 56.175434273986866, 36.99896217534477)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">ВкусВилл</div>' +
@@ -335,7 +335,7 @@ function addCardLeftMenu(){
     dataInfo_1 += '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(7), initialize(\'select\', 56.175434273986866, 36.99896217534477)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">' + document.querySelector('#namePlace').value + '</div>' +
@@ -383,7 +383,7 @@ function menuOpen1(){
     let data = '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(0)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Название точки</div>' +
@@ -435,7 +435,7 @@ function menuOpen2(){
     let data = '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(0)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Название точки</div>' +
@@ -487,7 +487,7 @@ function menuOpen3(){
     let data = '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(0)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Название точки</div>' +
@@ -538,7 +538,7 @@ function menuOpen4(){
     let data = '<div class="boxOfPoint">' +
         '<div class="upBlockOfPoint" onclick="openAnotherInfo(0)">' +
             '<div class="leftPoint">' +
-                '<img src="img/Point.svg" alt="icon" width="65%" height="65%">' +
+                '<img src="/main/img/Point.svg" alt="icon" width="65%" height="65%">' +
             '</div>' +
             '<div class="rightPoint">' +
                 '<div class="upPoint">Название точки</div>' +

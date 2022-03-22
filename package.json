@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon src/app.ts",
+    "watch": "nodemon src/app.ts -e ejs,js,css",
     "dev": "ts-node src/app.ts",
     "start": "ts-node dist/app.js",
     "build": "tsc -p .",
