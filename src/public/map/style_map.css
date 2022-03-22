@@ -1,0 +1,154 @@
+
+/* [S] Tag ======================================================================================= */
+
+body {
+	margin:0 auto; 
+	padding: 0;
+	border:0;
+	border:none;
+	font-family:"Arial";
+	height:100%; 
+    width:100%;
+    min-width:600px;    /* Minimum width of layout - remove line if not required */
+}
+
+/*
+body { 
+    overflow-y: hidden; 
+} 
+*/
+h1,h2,h3,h4,h5 {
+	display: inline; 
+	color:#000000;
+	font-weight:bold;
+	margin:0 auto; 
+}
+h1 { 
+	font-size:1.2em;
+}
+h2 { 
+	font-size:1.1em;
+}
+h3 { 
+	font-size:1.0em;
+}
+
+h4{ 
+}
+
+h5{ 
+}
+
+ul {
+}
+
+a
+{
+	font-family:"Arial";
+    text-decoration:none;
+	color:#005296; 
+	
+}
+a:visited
+{
+	font-family:"Arial";
+    text-decoration:none ;
+	color:#005296; 
+}
+
+a:active
+{
+	font-family:"Arial";
+	text-decoration: underline;
+	color:#005296; 
+}
+
+a:hover
+{
+	font-family:"Arial";
+	text-decoration: underline;
+	color:#005296; 
+}
+
+.stl_head_box {
+	height: 48px;
+	padding-top:5px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	background-color:#eee;
+	background-image:-webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#d6d6d6));
+	background-image:-moz-linear-gradient(top,#fafafa,#d6d6d6);
+	border-left:1px solid #bbbbbb;
+	border-top:1px solid #bbbbbb;
+	border-right:1px solid #bbbbbb;
+	border-bottom:1px solid #bbbbbb
+}
+/* [E] Tag ======================================================================================= */
+
+
+/*[S] obj_head ----------------------------------------------------------------------------------------*/
+#obj_head {
+    top: 0px;  
+    width: 100%;
+	height: 60px;
+}
+/*[E] obj_head ----------------------------------------------------------------------------------------*/
+
+/*[S] obj_map_logo ----------------------------------------------------------------------------------------*/
+#obj_map_logo {  
+	float:left;
+	height: 48px;
+	padding:5px;
+} 
+/*[E] obj_map_logo ----------------------------------------------------------------------------------------*/
+/*[S] obj_map_title ----------------------------------------------------------------------------------------*/
+#obj_map_title {  
+	float:left;
+	height: 48px;
+	padding:5px;
+} 
+/*[E] obj_map_title ----------------------------------------------------------------------------------------*/
+/*[S] obj_geo_hierarchy ----------------------------------------------------------------------------------------*/
+#obj_geo_hierarchy {  
+	padding-left:2px;
+	font-size:0.8em;
+} 
+/*[E] obj_geo_hierarchy ----------------------------------------------------------------------------------------*/
+
+/*[S] obj_map_addthis ----------------------------------------------------------------------------------------*/
+#obj_map_addthis {  
+	float:right;
+	padding:15px;
+	height: 48px;
+	width:245px;
+} 
+/*[E] obj_map_addthis ----------------------------------------------------------------------------------------*/
+/*[S] obj_map ----------------------------------------------------------------------------------------*/
+#obj_map {  
+    width: 100%; 
+    position: absolute; 
+    top: 60px;  
+    left: 0; 
+	border:0;
+    bottom: 0; 
+	padding:0;
+} 
+/*[E] obj_map ----------------------------------------------------------------------------------------*/
+
+/*[S] obj_photo-panel ----------------------------------------------------------------------------------------*/
+#obj_photo-panel {
+	background: #fff;
+	padding: 5px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 300px;
+	max-height: 300px;
+	font-size: 12px;
+	font-family: Arial;
+	border: 1px solid #ccc;
+	box-shadow: -2px 2px 2px rgba(33, 33, 33, 0.4);
+	display: none;
+}
+/*[S] obj_photo-panel ----------------------------------------------------------------------------------------*/
+/* [E] Object ======================================================================================= */

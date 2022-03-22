@@ -1,0 +1,960 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none;
+    outline: none;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+#blackBack {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    overflow-y: scroll;
+    display: none;
+}
+
+#modalWindow {
+    width: 577px;
+    height: 94vh;
+    max-height: 873px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+    background-color: hsla(0, 0%, 100%, 1);
+    position: relative;
+    display: none;
+    padding: 20px 42px;
+    overflow-y: auto;
+}
+
+#closedModal {
+    width: 10px;
+    height: 10px;
+    font-size: 34px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: hsla(0, 0%, 40%, 1);
+}
+
+#closedModal2 {
+    width: 20px;
+    height: 20px;
+    font-size: 56px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    color: hsla(0, 0%, 40%, 1);
+    display: none;
+}
+
+#closedModal:hover, #closedModal2:hover {
+    cursor: pointer;
+    color: hsla(249, 58%, 52%, 1);
+}
+
+.script {
+    font-size: 10px;
+}
+
+.block {
+     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     z-index: 20;
+}
+
+.block:hover {
+    background-color: hsla(0, 0%, 20%, 0.2);
+}
+
+#openMenu {
+    display: none;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+#body {
+    overflow: hidden;
+}
+
+#mainBlock {
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 90%, 1);
+}
+
+#mapBlock {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#mapContent {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#newsBlock {
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+    background-color: hsla(107, 78%, 96%, 1);
+}
+
+#menuContent {
+    width: 420px;
+    height: auto;
+    position: fixed;
+    top: 5px;
+    left: 50px;
+    z-index: 15;
+    display: none;
+}
+
+#topMenu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+#topMenu div:first-child {
+    width: 70%;
+    text-align: left;
+}
+
+#topMenu div:first-child span:first-child {
+    font-size: 38px;
+    color: hsla(144, 54%, 46%, 1);
+}
+
+#topMenu div:first-child span:last-child {
+    font-size: 16px;
+    color: hsla(252, 59%, 59%, 1);
+}
+
+#topMenu div:last-child {
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#bottomMenu {
+    width: 350px;
+    min-height: 60px;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 7;
+    border-radius: 15px 15px 0 0;
+}
+
+#addButton {
+    padding: 10px 37px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsla(249, 58%, 52%, 1);
+    color: hsla(0, 0%, 100%, 1);
+}
+
+#addButton:hover {
+    cursor: pointer;
+    background-color: hsla(249, 58%, 42%, 1);
+}
+
+#clipBlock {
+    width: 35%;
+    height: 230px;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    position: relative;
+}
+
+#forNewsBlock {
+    width: 48%;
+    height: 230px;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+#linkMenu {
+    width: 17%;
+    height: 230px;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    padding-left: 20px;
+}
+
+.link span:hover a {
+    cursor: pointer;
+    color: hsla(0, 0%, 40%, 1);
+    text-decoration: none;
+}
+
+.link span a {
+    color: black;
+}
+
+#lastLink {
+    width: 70%;
+    height: 52px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.blockClip {
+    width: 140px;
+    height: 100%;
+    margin: 0 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blockNews {
+    width: 140px;
+    height: 100%;
+    margin: 0 5px;
+    -webkit-box-shadow: 1px 8px 9px 3px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 1px 8px 9px 3px rgba(34, 60, 80, 0.2);
+    box-shadow: 1px 8px 9px 3px rgba(34, 60, 80, 0.2);
+    overflow: hidden;
+}
+
+.newsTop {
+    width: 100%;
+    height: 50%;
+    padding: 10px 5px;
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.newsTop div:first-child {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.newsTop div:last-child {
+    font-size: 12px;
+}
+
+.newsMiddle {
+    width: 100%;
+    height: 15%;
+    padding: 5px;
+    background-color: hsla(0, 0%, 100%, 1);
+    display: flex;
+    align-items: center;
+}
+
+.newsMiddle div:first-child {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+.newsMiddle div:last-child {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.newsBottom {
+    width: 100%;
+    height: 35%;
+}
+
+.butRead {
+    padding: 2px 5px;
+    border-radius: 50px;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+    color: hsla(0, 0%, 20%, 1);
+    font-size: 10px;
+}
+
+.butRead:hover {
+    cursor: pointer;
+    background-color: hsla(0, 0%, 60%, 1);
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.clipTop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    height: 100%;
+}
+
+.img2 {
+    width: 100%;
+}
+
+.clipBottom {
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.clipBottom span {
+    color: hsla(0, 0%, 100%, 1);
+}
+
+#iconMenu {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    border-radius: 15px 15px 0 0;
+}
+
+.icon_change:hover {
+    cursor: pointer;
+}
+
+#buttonMenu {
+    width: 100%;
+    height: 105px;
+    background-color: hsla(46, 100%, 59%, 1);
+    position: relative;
+}
+
+#contentMenu {
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 1);
+    overflow-y: scroll;
+    position: relative;
+}
+
+#closedMenuBack {
+    width: 50px;
+    height: 50px;
+    background-color: hsla(0, 0%, 100%, 1);
+    color: hsla(0, 0%, 50%, 1);
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#closedMenuBack:hover {
+    cursor: pointer;
+    color: hsla(252, 59%, 59%, 1);
+}
+
+#closedMenuBack:hover .title {
+    display: block;
+}
+
+.tapMenu {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, 1);
+    position: relative;
+}
+
+.title {
+    display: none;
+    white-space: nowrap;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background-color: hsla(149, 58%, 52%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    border-radius: 10px;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    z-index: 10;
+    font-size: 12px;
+}
+
+.tapMenu:hover .title {
+    display: block;
+}
+
+.tapMenu:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.tapMenu:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+.blockForWindow {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.blockForWindow div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 15px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.blockForWindow div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+.blockForWindow div:active {
+    background-color: hsla(0, 0%, 40%, 1);
+}
+
+.blockForMenu {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.blockForMenu div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 5px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(46, 100%, 59%, 1);
+}
+
+.blockForMenu div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+.blockForMenu2 {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.blockForMenu2 div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 5px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(11, 94%, 65%, 1);
+}
+
+.blockForMenu2 div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+.blockForMenu3 {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.blockForMenu3 div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 5px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(144, 57%, 57%, 1);
+}
+
+.blockForMenu3 div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+.blockForMenu4 {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.blockForMenu4 div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 5px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(285, 100%, 74%, 1);
+}
+
+.blockForMenu4 div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+.blockForMenu5 {
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.blockForMenu5 div {
+    border-radius: 25px;
+    padding: 5px 9px;
+    margin-right: 5px;
+    font-size: 11px;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background-color: hsla(252, 59%, 59%, 1);
+}
+
+.blockForMenu5 div:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+}
+
+#searchInput {
+    border-radius: 50px;
+    border: 1px solid hsla(0, 0%, 90%, 1);
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+::-webkit-scrollbar-button {
+background-image: url('');
+background-repeat: no-repeat;
+width: 5px;
+height: 0px;
+}
+
+::-webkit-scrollbar-track {
+background-color: hsla(0, 0%, 100%, 1);
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background-color: hsla(0, 0%, 70%, 1);
+height: 20px;
+}
+
+::-webkit-resizer{
+background-image: url('');
+background-repeat: no-repeat;
+width: 4px;
+height: 0px;
+}
+
+::-webkit-scrollbar{
+width: 10px;
+}
+
+.boxOfPoint {
+    width: 100%;
+    height: auto;
+}
+
+.upBlockOfPoint {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.upBlockOfPoint:hover {
+    cursor: pointer;
+    background-color: hsla(252, 59%, 59%, 0.1);
+}
+
+.leftPoint {
+    width: 15%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightPoint {
+    width: 85%;
+    height: auto;
+    position: relative;
+}
+
+.upPoint, .bottomPoint {
+    width: 100%;
+    height: auto;
+    padding-top: 9px;
+}
+
+.upPoint {
+    font-weight: bold;
+}
+
+.middlePoint {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 7px;
+}
+
+.middleLeft {
+    width: 75%;
+    height: auto;
+    font-size: 11px;
+    text-align: left;
+}
+
+.middleRight {
+    width: 25%;
+    height: auto;
+    font-size: 11px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.bottomPoint {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    padding-right: 10px;
+    padding-bottom: 9px;
+}
+
+.classZ {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hsla(252, 59%, 59%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.discThree {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    color: hsla(252, 59%, 59%, 1);
+}
+
+.discThree span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.discOne {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.listPadding {
+    padding: 0 17px;
+}
+
+.discTwo {
+    padding: 0 10px;
+}
+
+.discTwo img {
+    width: 49%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.discTwo img {
+    cursor: pointer;
+}
+
+.upDiscr {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    right: 37px;
+    top: 9px;
+    font-size: 11px;
+    color: hsla(0, 0%, 50%, 1);
+}
+
+.upDiscr:hover {
+    cursor: pointer;
+    color: hsla(252, 59%, 59%, 1);
+}
+
+.discriptionPoint {
+    border-bottom: 1px solid hsla(0, 0%, 70%, 1);
+    border-top: 1px dotted hsla(0, 0%, 70%, 1);
+    display: none;
+}
+
+#imgBig {
+    width: auto;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+    position: relative;
+    display: none;
+}
+
+.modalHeader {
+    font-family: arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.modalHeaderSmall {
+    font-family: constantia;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.boxIcon {
+    width: 68px;
+    height: 68px;
+    border-radius: 5px;
+    border: 3px solid hsla(252, 59%, 59%, 0.5);
+    margin-bottom: 34px;
+}
+
+.boxIcon:hover {
+    cursor: pointer;
+    background-color: hsla(0, 0%, 95%, 1);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexOnly {
+    display: flex;
+}
+
+.boxIconInner {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid hsla(210, 50%, 20%, 1);
+    text-align: center;
+}
+
+.boxIconInner img {
+    width: 40px;
+    margin-top: 5px;
+    margin-bottom: -7px;
+}
+
+.margin_bottom_25 {
+    margin-bottom: 25px;
+}
+
+.input_100 {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.input_80 {
+    width: 70%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.input_50 {
+    width: 80%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.input_30 {
+    width: 80%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.textarea {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.half_60 {
+    width: 60%;
+}
+
+.half_40 {
+    width: 40%;
+}
+
+.margin_right {
+    margin-right: 20%;
+}
+
+.photoBox {
+    width: 79px;
+    height: 74px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.photoBox img {
+    width: 79px;
+    height: 74px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.addPhoto {
+    width: 79px;
+    height: 74px;
+    border-radius: 8px;
+    border: 1px dotted hsla(249, 58%, 52%, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: hsla(249, 58%, 52%, 1);
+}
+
+.addPhoto:hover {
+    cursor: pointer;
+    color: hsla(249, 58%, 40%, 1);
+}
+
+.blockBut {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#modalWindowThanks {
+    width: 521px;
+    height: 257px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    z-index: 25;
+    background-color: hsla(0, 0%, 100%, 1);
+    position: relative;
+    display: none;
+    padding: 30px 70px;
+}
+
+.thanksBig {
+    font-family: constantia;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.thanksSmall {
+    font-family: constantia;
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.tanksInner {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textVerySmall {
+    font-size: 9px;
+}
+
+.textBox {
+    border: 1px solid hsla(0, 0%, 50%, 1);
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.textBox:hover {
+    cursor: pointer;
+    background-color: hsla(0, 0%, 90%, 1);
+}

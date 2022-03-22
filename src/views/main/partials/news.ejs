@@ -1,0 +1,107 @@
+<div id="clipBlock">
+    <div class="blockClip">
+        <div class="clipTop">
+            <img src="img/one.jpg" alt="photo" class="img">
+        </div>
+        <div class="clipBottom">
+            <span>Здесь располагается короткое</span>
+        </div>
+    </div>
+    <div class="blockClip">
+        <div class="clipTop">
+            <img src="img/two.jpg" alt="photo" class="img">
+        </div>
+        <div class="clipBottom">
+            <span>Здесь располагается короткое</span>
+        </div>
+    </div>
+    <div class="blockClip">
+        <div class="clipTop">
+            <img src="img/three.jpg" alt="photo" class="img">
+        </div>
+        <div class="clipBottom">
+            <span>Здесь располагается короткое</span>
+        </div>
+    </div>
+</div>
+<div id="forNewsBlock">
+    <% articles.forEach(article => { %>
+        <%- include('./blockNews', {article}) %>
+    <% }) %>
+    
+    <!-- <div class="blockNews">
+        <div class="newsTop">
+            <div><b>Тут какой-то заголовок</b></div>
+            <div>Здесь небольшая новость описанная кратким текстом...</div>
+        </div>
+        <div class="newsMiddle">
+            <div><span>01.09.2021</span></div>
+            <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+        </div>
+        <div class="newsBottom">
+            <img src="img/img_1.jfif" alt="photo" class="img2">
+        </div>
+    </div>
+    <div class="blockNews">
+        <div class="newsTop">
+            <div><b>Тут какой-то заголовок</b></div>
+            <div>Здесь небольшая новость описанная кратким текстом...</div>
+        </div>
+        <div class="newsMiddle">
+            <div><span>01.09.2021</span></div>
+            <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+        </div>
+        <div class="newsBottom">
+            <img src="img/img_2.jfif" alt="photo" class="img2">
+        </div>
+    </div>
+    <div class="blockNews">
+        <div class="newsTop">
+            <div><b>Тут какой-то заголовок</b></div>
+            <div>Здесь небольшая новость описанная кратким текстом...</div>
+        </div>
+        <div class="newsMiddle">
+            <div><span>01.09.2021</span></div>
+            <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+        </div>
+        <div class="newsBottom">
+            <img src="img/img_3.jfif" alt="photo" class="img2">
+        </div>
+    </div>
+    <div class="blockNews">
+        <div class="newsTop">
+            <div><b>Тут какой-то заголовок</b></div>
+            <div>Здесь небольшая новость описанная кратким текстом...</div>
+        </div>
+        <div class="newsMiddle">
+            <div><span>01.09.2021</span></div>
+            <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+        </div>
+        <div class="newsBottom">
+            <img src="img/img_4.jfif" alt="photo" class="img2">
+        </div>
+    </div>
+    <div class="blockNews">
+        <div class="newsTop">
+            <div><b>Тут какой-то заголовок</b></div>
+            <div>Здесь небольшая новость описанная кратким текстом...</div>
+        </div>
+        <div class="newsMiddle">
+            <div><span>01.09.2021</span></div>
+            <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+        </div>
+        <div class="newsBottom">
+            <img src="img/img_5.jfif" alt="photo" class="img2">
+        </div>
+    </div> -->
+</div>
+<div id="linkMenu">
+    <div class="link"><span onclick=""><b>Новости</b></span></div>
+    <div class="link"><span onclick=""><b>Обучение</b></span></div>
+    <div class="link"><span onclick=""><b>Стань партнёром</b></span></div>
+    <div class="link"><span onclick=""><a href="http://greenmap.site/"><b>О проекте</b></a></span></div>
+    <div class="link"><span onclick=""><b>Задать вопрос</b></span></div>
+    <div id="lastLink">
+        <a href="https://dobrodel.mosreg.ru/"><img src="img/image.png" alt="logo" width="100%"></a>
+    </div>
+</div>

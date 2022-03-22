@@ -1,0 +1,90 @@
+<div id="modalWindow">
+    <div id="closedModal" onclick="modalOpenClosed(); clearAll();">×</div>
+    <div class="modalHeader">Новая точка на карте</div>
+    <div>
+        <div class="modalHeaderSmall">Выберите тип объекта</div>
+        <div class="flex">
+            <div class="boxIcon" onclick="changeButWindow(1)">
+                <div class="boxIconInner">
+                    <img src="img/1_active.svg" alt="photo" width="100%"><br>
+                    <span class="textVerySmall">Переработка</span>
+                </div>
+            </div>
+            <div class="boxIcon" onclick="changeButWindow(2)">
+                <div class="boxIconInner">
+                    <img src="img/2_active.svg" alt="photo" width="100%"><br>
+                    <span class="textVerySmall">Шеринг</span>
+                </div>
+            </div>
+            <div class="boxIcon" onclick="changeButWindow(3)">
+                <div class="boxIconInner">
+                    <img src="img/3_active.svg" alt="photo" width="100%"><br>
+                    <span class="textVerySmall">Экомаршруты</span>
+                </div>
+            </div>
+            <div class="boxIcon" onclick="changeButWindow(4)">
+                <div class="boxIconInner">
+                    <img src="img/4_active.svg" alt="photo" width="100%"><br>
+                    <span class="textVerySmall">Сообщество</span>
+                </div>
+            </div>
+            <div class="boxIcon" onclick="changeButWindow(5)">
+                <div class="boxIconInner">
+                    <img src="img/5_active.svg" alt="photo" width="100%"><br>
+                    <span class="textVerySmall">Обучение</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin_bottom_25">
+        <div class="modalHeaderSmall">Отметьте подходящие теги</div>
+        <div id="butWinHere">
+            
+        </div>
+    </div>
+    <div>
+        <div class="modalHeaderSmall">Название объекта</div>
+        <div><input type="text" placeholder="Название объекта" class="input_100" id="namePlace"></div>
+        <div class="flex">
+            <div class="half_60">
+                <div class="modalHeaderSmall">Координаты</div>
+                <div><input type="text" placeholder="Координаты объекта" class="input_80" id="coordinats"></div>
+            </div>
+            <div class="half_40">
+                <div class="modalHeaderSmall">Время работы</div>
+                <div class="flex">
+                    <div><input type="text" placeholder="00:00" class="input_50 margin_right" id="timeWork_1"></div>
+                    <div><input type="text" placeholder="00:00" class="input_30" id="timeWork_2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modalHeaderSmall">Адрес</div>
+        <div><input type="text" placeholder="Адрес объекта" class="input_100" id="adress"></div>
+        <div class="modalHeaderSmall">Описание</div>
+        <div style="display: flex;"><div class="textBox" onclick="editText(0)">перенос строки</div><div class="textBox" onclick="editText(1)">жирный текст</div><div class="textBox" onclick="editText(2)">курсивный текст</div></div>
+        <div><textarea type="text" placeholder="Описание объекта" class="textarea" rows="3" maxlength="400" id="discription"></textarea></div>
+    </div>
+    <div>
+        <div class="modalHeaderSmall">Прикрепить фото</div>
+        <div class="flexOnly">
+            <div class="photoBox"><img src="" width="100%"></div>
+            <div class="photoBox"><img src="" width="100%"></div>
+            <div class="addPhoto" onclick="document.querySelector('#fileToUpload').click()">+</div>
+            <div style="display: none;">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload" onchange="this.form.submit()">
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="blockBut">
+        <input type="button" onclick="" value="создать точку" id="addButton">
+    </div>
+</div>
+<div id="modalWindowThanks">
+    <div class="tanksInner"><img src="img/thanks.png" alt="thanks"></div>
+    <div class="thanksBig">Спасибо! Точка добавлена.</div>
+    <div class="thanksSmall">Как только объект будет проверен модератором, точка будет добавлена на карту.</div>
+</div>
+<div id="closedModal2" onclick="modalOpenClosed()">×</div>
+<img id="imgBig" src="" alt="photo" width="400px" onclick="modalOpenClosed()">

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+    <%- include('./partials/head') %>
+    <body id="body" onload="initialize('none')">
+        <div id="mainBlock">
+            <div id="mapBlock">
+                <%- include('./partials/map') %>
+                <div id="menuContent">
+                    <div id="topMenu">
+                        <%- include('./partials/header') %>
+                    </div>
+                    <div id="bottomMenu">
+                        <%- include('./partials/menu') %>
+                    </div>
+                </div>
+            </div>
+            <div id="newsBlock">
+                <%- include('./partials/news', {articles: articles}) %>
+            </div>
+        </div>
+        <div id="blackBack">
+            <%- include('./partials/modal') %>
+        </div>
+        <script src="js/menuOpen.js?1.0"></script>
+        <script src="js/mainFunction.js?1.0"></script>
+    </body>
+</html>

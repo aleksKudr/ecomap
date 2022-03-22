@@ -1,0 +1,13 @@
+<div class="blockNews">
+    <div class="newsTop">
+        <div><b><%= article.title %> </b></div>
+        <div><%= article.content %></div>
+    </div>
+    <div class="newsMiddle">
+        <div><span><%= (new Date(article.createdAt)).toLocaleDateString() %> </span></div>
+        <div><input type="button" value="читать" class="butRead" onclick="modalOpenClosed()"></div>
+    </div>
+    <div class="newsBottom">
+        <img src="img/<%= article.image %>" alt="photo" class="img2">
+    </div>
+</div>

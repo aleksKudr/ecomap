@@ -1,0 +1,17 @@
+.idea
+.git
+.vagrant
+Dockerfile
+Vagrantfile
+# .gitignore
+install.sh
+rsa_keys
+/app/static/spa
+/node_modules
+/data
+/build
+/dist
+/.adminbro
+/spa/node_modules
+/app/node_modules
+/app/bower_components
