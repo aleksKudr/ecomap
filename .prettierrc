@@ -1,5 +1,15 @@
 {
-  "semi": false, // Specify if you want to print semicolons at the end of statements
-  "singleQuote": true, // If you want to use single quotes
-  "arrowParens": "avoid" // Include parenthesis around a sole arrow function parameter
+  "printWidth": 120,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "semi": true,
+  "quoteProps": "as-needed",
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": { "parser": "typescript" }
+    }
+  ]
 }

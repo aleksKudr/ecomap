@@ -33,10 +33,10 @@ const start = async () => {
   const router = AdminBroExpress.buildRouter(adminBro);
 
   app.set("view engine", "ejs");
-  app.set("views", path.join(__dirname, "../src/views"));
+  app.set("views", path.join(__dirname, "../views"));
   app.use(adminBro.options.rootPath, router);
 
-  app.use(express.static(path.join(__dirname, "public")));
+  app.use(express.static(path.join(__dirname, "../public")));
 
   app.use("/", routers);
 
