@@ -1,0 +1,287 @@
+<nav class="navbar navbar-light bg-light position-absolute"
+        style="z-index: 100; background-color: transparent !important; right: 0;">
+    <div class="container-fluid">
+      <button style="background-color: #666FE8;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Green House
+            <!-- <img src="/ecopoint/img/logo.png" /> -->
+          </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-content-between">
+          <ul class="navbar-nav flex-grow-1 pe-3">
+            <li class="nav-item border-top">
+              <a disabled id="ALL" class="hemical-setting nav-link m-1 mt-2  d-flex justify-content-between"
+                aria-current="page" href="#">
+                <img class="hemical-index ml-1" src="/ecopoint/img/financial.svg" />
+
+                <span>Air quality</span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a id="CO" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  CO
+                </span>
+
+                <span>Carbon monoxide</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="SO2" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  SO<sub>2</sub>
+                </span>
+
+                <span>Sulfur dioxide</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="CH4" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  CH<sub>4</sub>
+                </span>
+
+                <span>Methane</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="H2S" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  H<sub>2</sub>S
+                </span>
+
+                <span>Hydrogen sulfide</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="NH3" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  NH<sub>3</sub>
+                </span>
+
+                <span>Ammonia</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a id="NO" class="hemical-setting nav-link m-1  d-flex justify-content-between active" href="#">
+                <span class="hemical-index ml-1">
+                  NO
+                </span>
+
+                <span>Nitric oxide</span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a id="NO2" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  NO<sub>2</sub>
+                </span>
+
+                <span>Nitrogen dioxide</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="O3" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  O<sub>3</sub>
+                </span>
+
+                <span>Ground-level ozone</span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a id="PM10" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  PM10
+                </span>
+
+                <span>Suspended particles </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a id="PM2.5" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  PM2.5
+                </span>
+
+                <span>Suspended particles </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a disabled id="C6H6" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  C<sub>6</sub>Н<sub>6</sub>
+                </span>
+
+                <span>Benzene</span>
+              </a>
+            </li>
+
+            <li class="nav-item border-top">
+              <a disabled id="C10H8" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  C<sub>10</sub>Н<sub>8</sub>
+                </span>
+
+                <span>Naphthalene </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a disabled id="C8H8" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  C<sub>8</sub>Н<sub>8</sub>
+                </span>
+
+                <span>Styrene </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a disabled id="C7H8" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  C<sub>7</sub>Н<sub>8</sub>
+                </span>
+
+                <span>Toluene </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a disabled id="C6H5OH" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  C<sub>6</sub>Н<sub>5</sub>OH
+                </span>
+
+                <span>Phenol </span>
+              </a>
+            </li>
+            <li class="nav-item border-top">
+              <a disabled id="CH20" class="hemical-setting nav-link m-1  d-flex justify-content-between" href="#">
+                <span class="hemical-index ml-1">
+                  CН<sub>2</sub>
+                </span>
+
+                <span>Formaldehyde</span>
+              </a>
+            </li>
+          </ul>
+          <div>
+            <a class="m-2" href="/ecopoint/report.xlsx" download>
+              <button type="button" class="btn btn-primary">
+                Download the report
+              </button>
+            </a>
+
+            <button class="navbar-toggler nav-link m-1" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar1" aria-controls="offcanvasNavbar1">
+
+              <img src="/ecopoint/img/settings.svg" />
+
+              <span>Setting up calculations</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-end" tabindex="-2" id="offcanvasNavbar1" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel1">
+            Green House
+            <!-- <img src="/ecopoint/img/logo.png" /> -->
+          </h5>
+          <button type="button" class="btn-close text-reset" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-content-between">
+          <form id="models-form" action="/api/v1/model" method="post">
+            <div>
+              <div class="form-group">
+                <div class="field">
+                  <label><strong>Calculation model 1</strong></label>
+                  <select name="model-1" id="model-1" class="form-select" aria-label="Default select example">
+                    <option value="0" selected>Not selected</option>
+                    <option value="1">Machine learning</option>
+                    <option value="2">Neural network</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Layer Size</label>
+                  <input name="size-layer-1" id="size-layer-1" class="form-control" />
+                </div>
+                <div class="field">
+                  <label>Depth</label>
+                  <input name="depth-1" id="depth-1" class="form-control" />
+                </div>
+                <div class="field">
+                  <label>Number of epochs</label>
+                  <input name="era-length-1" id="era-length-1" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="field">
+                  <label><strong>Calculation model 2</strong></label>
+                  <select name="model-2" id="model-2" class="form-select" aria-label="Default select example">
+                    <option value="0" selected>Not selected</option>
+                    <option value="1">Machine learning</option>
+                    <option value="2">Neural network</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Layer Size</label>
+                  <input name="size-layer-2" id="size-layer-2" class="form-control" />
+                </div>
+                <div class="field">
+                  <label>Depth</label>
+                  <input name="depth-2" id="depth-2" class="form-control" />
+                </div>
+                <div class="field">
+                  <label>Number of epochs</label>
+                  <input name="era-length-2" id="era-length-2" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <strong>Weight distribution</strong>
+                <div class="field">
+                  <label>Model 1</label>
+                  <input name="weight-1" id="weight-1" class="form-control" />
+                </div>
+                <div class="field">
+                  <label>Model 2</label>
+                  <input name="weight-2" id="weight-2" class="form-control" />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+          </form>
+
+          <div class="mt-3 mb-3">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              + add a station
+            </button>
+          </div>
+
+
+          <div>
+            <button class="navbar-toggler nav-link m-1 mt-3" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar" aria-label="Close">
+
+              <img src="/ecopoint/img/logout.svg" />
+
+              <span>To the main screen</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

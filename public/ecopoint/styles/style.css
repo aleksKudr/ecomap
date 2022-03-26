@@ -1,0 +1,54 @@
+.map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+  }
+  .map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    width: 75%;
+    bottom: 10%;
+    left: 10%;
+    padding: 10px;
+    display: block;
+}
+
+.mapboxgl-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapboxgl-popup-content *:not(button) {
+  margin: 5px;
+}
+
+.hemical-index {
+  color: #666FE8;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background-color: #F3F3F8;
+}
+
+.hemical-setting.active {
+  background-color: #F3F3F8;
+}
+
+.hemical-setting.active span {
+  font-weight: 500;
+}
+
+.hemical-active {
+  position:absolute;
+  background-color: blue;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  color: wheat;
+}

@@ -1,26 +1,26 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-export interface IArticle {
-  title: string,
-  content: string,
-  author: string,
-  createdAt: Date,
-  published: boolean,
-  image: string,
-}
+export type IArticle = {
+  title: string;
+  content: string;
+  author: string;
+  createdAt: Date;
+  published: boolean;
+  image: string;
+};
 
-const ArticleSchema = new Schema({
+const ArticleSchema = new Schema<IArticle>({
   title: String,
   content: String,
   author: String,
   createdAt: Date,
   published: Boolean,
-  image: String,
+  image: String
 });
 
-const Article = mongoose.model("Article", ArticleSchema);
+const Article = mongoose.model('Article', ArticleSchema);
 
 // module.exports = Article;
 

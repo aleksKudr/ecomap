@@ -1,0 +1,12 @@
+{
+  "model-1": "1",
+  "size-layer-1": "2",
+  "depth-1": "2",
+  "era-length-1": "1",
+  "model-2": "1",
+  "size-layer-2": "2",
+  "depth-2": "2",
+  "era-length-2": "10",
+  "weight-1": "1",
+  "weight-2": "12"
+}
